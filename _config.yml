@@ -9,6 +9,7 @@
 title: Regrex.it
 email: regrexit@hactar.is
 description: > # this means to ignore newlines until "baseurl:"
+  A collection of resources for helping to ensure a safe future for the UK.
   Got a resource that you think we should add? Email or tweet us to let us know.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://regrex.it" # the base hostname & protocol for your site

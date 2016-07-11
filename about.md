@@ -10,3 +10,5 @@ It seems quite a few people who voted to leave the EU are now having second thou
 *Maybe you're just incredibly embarassed at the existence of Nigel Farage.*
 
 Whatever the reason, now that [the pound is at its lowest level for over 30 years](http://www.independent.co.uk/news/business/news/pound-sterling-argentine-peso-worst-performing-currency-eu-referendum-brexit-a7127246.html) and [racist attacks are on the rise](http://www.independent.co.uk/news/uk/home-news/brexit-eu-referendum-racial-racism-abuse-hate-crime-reported-latest-leave-immigration-a7104191.html), you might be wondering what you can do about this flaming shit we've put on our own doorstep. You're not alone. At least 48% of the population of the UK are wondering the same thing.
+
+This site aims to collect resources that could aid in ensuring a safe route forward for the UK. If you have a resource you think should be added, please [tweet us](https://twitter.com/regrex_it) or [email us](mailto:regrexit@hactar.is).
