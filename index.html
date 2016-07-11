@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+    <div class="masonry">
+    {% for _ in site.links %}
+        <div class="item">
+            <h2>
+                <a href="{{ _.link }}">{{ _.title }}</a>
+            </h2>
+            <p>{{ _.content }}</p>
+            {% if _.twitter %}
+                {% include icon-twitter.html username=_.twitter %}
+            {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+
+</div>
