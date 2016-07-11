@@ -10,7 +10,7 @@ layout: default
                 <a href="{{ _.link }}">{{ _.title }}</a>
             </h2>
             <p>{{ _.content }}</p>
-            {% if _.twitter %}
+            {% if _.twitter and _.twitter != '' %} 
                 {% include icon-twitter.html username=_.twitter %}
             {% endif %}
         </div>
