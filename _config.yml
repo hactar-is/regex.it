@@ -20,14 +20,20 @@ github_username:  hactar
 markdown: kramdown
 
 collections:
-  links:
-    defaults:
-      - title
-      - categories
-      - link
-      - twitter
-      - type
+  - links
 
 exclude:
   - fabfile.py
   - fabfile.pyc
+
+
+defaults:
+  - scope:
+      path: ""
+      type: links
+    values:
+      title: ""
+      categories: []
+      link: ""
+      twitter: ""
+      type: ""
