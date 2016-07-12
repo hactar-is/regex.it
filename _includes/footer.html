@@ -10,7 +10,7 @@
 
         <div class="footer-col footer-col-2">
             <ul class="contact-list">
-                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                {% include icon-email.html %}
             </ul>
         </div>
 
@@ -26,7 +26,7 @@
       
     </div>
 
-    <p>Brought to you by <a href="http://hactar.is">Hactar</a></p>
+    {% include hactar-legend.html %}
 
   </div>
 

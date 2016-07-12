@@ -300,6 +300,35 @@ article.post{
             color: lighten($brand-highlight, 10);
         }
     }
+    svg {
+      fill: $brand-highlight;
+      &:hover{
+          color: lighten($brand-highlight, 10);
+      }
+    }
+    .icon > svg path {
+        fill: $brand-highlight;
+        &:hover{
+            color: lighten($brand-highlight, 10);
+        }
+    }
+    .icon.email{
+        margin-right: 5px;
+    }
+    .icon.hactar{
+        margin-right: 4px;
+        margin-top: -2px;
+        vertical-align: baseline !important;
+        width: 28px;
+        height: 28px;
+        svg{
+            width: 28px;
+            height: 28px;
+        }
+    }
+    a.hactar{
+        font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 }
 
 .footer-heading {
