@@ -1,0 +1,141 @@
+/*
+/* Helper functions */
+/*******************/
+
+@function summit($size, $sum:'-', $int: 1) {
+    @if $sum == '-' {
+        @return #{#{$size - $int}}
+    }
+    @if $sum == '+' {
+        @return #{#{$size + $int}}
+    }
+}
+
+@function em($pxval, $base: 16) {
+  @return ($pxval / $base) * 1em;
+}
+
+/*
+/* Display mixins */
+/*******************/
+
+@mixin textimage() {
+    display: inline-block;
+    text-indent: -999em;
+    background-repeat: no-repeat;
+    background: none no-repeat center center transparent;
+}
+
+@mixin unlist() {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    li, dt, dd {
+        margin: 0;
+    }
+}
+
+@mixin verticenter($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*
+ */
+/* Grid */
+/*******************/
+
+// -- Visual Grid
+$visual-grid: false;
+$visual-grid-index: front;
+$visual-grid-color: green;
+
+// -- Grid settings
+$column: 67px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1170px;
+
+// -- Breakpoints
+$nav-limit: 1045px;
+$s: 565px;
+$m: 970px;
+
+$xs2s: new-breakpoint(max-width summit($s));
+$xs2m: new-breakpoint(max-width summit($m));
+$s2m: new-breakpoint(min-width summit($s, '+') max-width summit($m));
+$s2l: new-breakpoint(min-width $s);
+$m2l: new-breakpoint(min-width $m);
+
+// -- Masthead
+$masthead-height: 80px;
+$compact-masthead-height: 50px;
+
+
+/*
+/* Colours */
+/*******************/
+
+//--- Greys
+$tan: #F6F4EF;
+$blue-light: #9CACBA;
+$blue-dark: #414654;
+$red: #C87C7C;
+
+/*
+/* Font sizes */
+/*******************/
+
+$base_px: 24;
+$base_lh: 28;
+
+$m_base_px: 16;
+$m_base_lh: 24;
+
+$alpha: 100;
+$alpha_lh: 110;
+
+$beta: 30;
+$beta_lh: 37;
+
+$milli: 14;
+$milli_lh: 18;
+
+
+/*
+/* Font families */
+/*******************/
+
+@include font-face("Sofia", "../fonts/sofia/regular");
+@include font-face("Sofia", "../fonts/sofia/semibold", 600);
+
+/*
+/* Font mixins */
+/*******************/
+
+@mixin sofia() {
+    font-family: "Sofia", Helvetica, Arial, sans-serif;
+}
+
+@mixin basefont() {
+    font-size: em($base_px, 16);
+    line-height: em($base_lh, $base_px);
+}
+
+@mixin alpha() {
+    font-size: em($alpha, $base_px);
+    line-height: em($alpha_lh, $alpha);
+}
+
+@mixin beta() {
+    font-size: em($beta, $base_px);
+    line-height: em($beta_lh, $beta);
+}
+
+@mixin milli() {
+    font-size: em($milli, $base_px);
+    line-height: em($milli_lh, $milli);
+}
