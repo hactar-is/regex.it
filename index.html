@@ -25,7 +25,7 @@ layout: default
             <h2><a href="{{ _.link }}">{{ _.title }}</a></h2>
             <p>{{ _.content }}</p>
             {% if _.twitter and _.twitter != '' %}
-                <a href="https://twiter.com/{{_.twitter}}">@{{_.twitter}}</a>
+                <a href="https://twiter.com/{{_.twitter}}" class="link-secondary">@{{_.twitter}}</a>
             {% endif %}
         </article>
     </li>

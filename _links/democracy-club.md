@@ -5,8 +5,5 @@ categories:
 - clubs
 - democracy
 link: https://democracyclub.org.uk
-twitter: ''
-type: ''
-layout: ''
 ---
 Join the club.

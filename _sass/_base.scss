@@ -60,6 +60,15 @@ a:hover, a:active {
     color: $red;
 }
 
+a.link-secondary {
+    &:link, &:visited {
+        color: $blue-light;
+    }
+    &:hover, &:active {
+        color: $red;
+    }
+}
+
 h1 {
     @include alpha();
     margin: 0 0 10px;
