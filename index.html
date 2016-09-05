@@ -23,7 +23,7 @@ layout: default
         <article class="{{ item_class }}">
             {% if _.type == 'event' %}<span class="category">Event</span>{% endif %}
             <h2><a href="{{ _.link }}">{{ _.title }}</a></h2>
-            <p>{{ _.content }}</p>
+            {{ _.content }}
             {% if _.twitter and _.twitter != '' %}
                 <a href="https://twiter.com/{{_.twitter}}" class="link-secondary">@{{_.twitter}}</a>
             {% endif %}

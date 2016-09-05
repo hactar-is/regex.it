@@ -9,6 +9,11 @@ function ready(fn) {
     document.addEventListener('DOMContentLoaded', fn);
   }
 }
+
+/*
+/* Init */
+/*******************/
+
 var item_grid = document.querySelector('.grid');
 
 ready(function () {
