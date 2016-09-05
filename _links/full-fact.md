@@ -6,7 +6,6 @@ categories:
 - " lies"
 link: https://fullfact.org
 twitter: fullfact
-type: ''
-layout: ''
+image: full-fact.jpg
 ---
 Because half-facts are useless.

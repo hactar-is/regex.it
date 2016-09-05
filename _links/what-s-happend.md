@@ -5,8 +5,6 @@ categories:
 - regrexit
 - shit
 link: http://www.sincewevotedtoleavethe.eu
-twitter: ''
-type: ''
-layout: ''
+image: nigel-farage.jpg
 ---
 since we voted to leave the EU?

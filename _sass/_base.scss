@@ -22,13 +22,17 @@ main {
 .container {
     @include outer-container;
     @include clearfix;
+    @include media(max-width $max-width) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 
 .hero {
     @include media($m2l) {
-        padding-top: 200px;
         .inner {
+            padding-top: 120px;
             @include span-columns(7 of 12);
         }
     }
@@ -42,6 +46,20 @@ main {
     @include beta();
 }
 
+.gamma {
+    @include gamma();
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: $blue-dark;
+}
+a:hover, a:active {
+    color: $red;
+}
+
 h1 {
     @include alpha();
     margin: 0 0 10px;
@@ -52,51 +70,163 @@ h1 {
 }
 
 h2 {
-    @include beta();
+    @include gamma();
+    margin: 0;
 }
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+}
+
+.panel {
+    background-color: #fff;
+    padding: 25px;
+    border-top: 4px solid $red;
+    @include media($s2l) {
+        box-shadow: 0 2px 12px -4px rgba(0, 0, 0, 0.5);
+    }
+    &.panel-event {
+        background-color: $red;
+        color: #fff;
+        a {
+            color: #fff;
+            &:hover, &:active {
+                color: $blue-dark;
+            }
+        }
+    }
+}
+
+.page-about article.panel {
+    @include media($m2l) {
+        max-width: 70%;
+        .post-content {
+            @include columns(2 1em);
+        }
+    }
 }
 
 .grid {
     @include clearfix;
+    @include unlist();
     position: relative;
-    .item {
-        background-color: #fff;
-        margin-bottom: 2.6455%;
-        padding: 25px;
-        @include media($s2l) {
-            box-shadow: 0 2px 12px -4px rgba(0, 0, 0, 0.5);
-        }
+}
 
-        figure {
-            margin: -25px -25px 0 -25px;
+.grid-item {
+    .panel {
+        p {
+            @include milli;
+        }
+        &.has-image {
+            border-top: 0px none;
         }
     }
-    .gutter-sizer {
-        width: 2.6455%;
-    }
+}
+
+.grid-item, .item-sizer {
     @include media($m2l) {
-        .item,
-        .item-sizer {
-            @include span-columns(3 of 12);
-            @include omega();
-
-        }
+        @include span-columns(3 of 12);
+        @include omega();
     }
     @include media($s2m) {
-        .item,
-        .item-sizer {
-            @include span-columns(4 of 12);
-            @include omega();
-        }
+        @include span-columns(6 of 12);
+        @include omega();
     }
     @include media($xs2s) {
-        .item {
-            width: 100%;
-            margin-right: 0;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.grid .grid-item {
+    margin-bottom: 2.6455%;
+}
+
+.gutter-sizer {
+    width: 2.6455%;
+}
+
+footer.global {
+    text-align: left;
+}
+
+.icon {
+    &:before {
+        width: 16px;
+        height: 16px;
+        background-size: 100% 100%;
+        background: none no-repeat right center transparent;
+        vertical-align: middle;
+        display: inline-block;
+        content: " ";
+        margin-right: 5px;
+        text-decoration:none;
+    }
+}
+
+.icon-twitter:before {
+    background-image: url('../images/icon-twitter.svg');
+}
+
+.icon-email:before {
+    background-image: url('../images/icon-email.svg');
+}
+
+.icon-hactar {
+    text-indent: -999em;
+    display: inline-block;
+    &:before {
+        display: block;
+        float: left;
+        text-indent: 0;
+        width: 40px;
+        height: 50px;
+        background-image: url('../images/logo-hactar.svg');
+    }
+}
+
+
+.social {
+    @include unlist();
+    @include clearfix;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0px;
         }
+    }
+}
+
+.credit {
+    @include milli();
+    @include media($m2l) {
+        padding-top: 20px;
+    }
+    .icon-hactar {
+        margin-top: 10px;
+    }
+}
+
+.category {
+    font-size: em(11);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.71px;
+}
+
+nav.primary {
+    @include delta();
+    padding-top: 40px;
+    ul {
+        @include unlist();
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+    a.active{
+        text-decoration: underline;
     }
 }

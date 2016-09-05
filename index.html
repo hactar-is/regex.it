@@ -2,34 +2,35 @@
 layout: default
 ---
 
-<div class="wrapper">
-    <ul class="grid">
-    {% for _ in site.links %}
-        {% assign item_class = 'item' %}
-        {% if _.type != '' %}
-            {% assign item_class = item_class | append: ' item-' | append: _.type %}
-        {% endif %}
+<ul class="grid">
+{% for _ in site.links %}
+    {% assign item_class = 'panel' %}
+    {% if _.type != '' %}
+        {% assign item_class = item_class | append: ' panel-' | append: _.type %}
+    {% endif %}
+    {% if _.image %}
+        {% assign item_image = _.image | prepend: 'images/items/' | prepend: site.baseurl %}
+        {% assign item_class = item_class | append: ' has-image' %}
+    {% endif %}
+    <li class="grid-item">
         {% if _.image %}
-            {% assign item_image = _.image | prepend: 'images/items/' | prepend: site.baseurl %}
-            {% assign item_class = item_class | append: ' has-image' %}
+        <figure>
+            <a href="{{ _.link }}">
+                <img src="{{item_image}}">
+            </a>
+        </figure>
         {% endif %}
-        <li class="{{ item_class }}">
-            {% if _.image %}
-                <figure>
-                    <img src="{{item_image}}">
-                </figure>
-            {% endif %}
-            <h2>
-                <a href="{{ _.link }}">{{ _.title }}</a>
-            </h2>
+        <article class="{{ item_class }}">
+            {% if _.type == 'event' %}<span class="category">Event</span>{% endif %}
+            <h2><a href="{{ _.link }}">{{ _.title }}</a></h2>
             <p>{{ _.content }}</p>
             {% if _.twitter and _.twitter != '' %}
-                <a href="{{_.twitter}}">Twitter</a>
+                <a href="https://twiter.com/{{_.twitter}}">@{{_.twitter}}</a>
             {% endif %}
-        </li>
-    {% endfor %}
-        <div class="item-sizer"></div>
-        <div class="gutter-sizer"></div>
-    </ul>
+        </article>
+    </li>
+{% endfor %}
+    <li class="item-sizer"></li>
+    <li class="gutter-sizer"></li>
+</ul>
 
-</div>

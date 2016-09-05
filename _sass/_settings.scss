@@ -89,17 +89,26 @@ $red: #C87C7C;
 /* Font sizes */
 /*******************/
 
-$base_px: 24;
-$base_lh: 28;
-
-$m_base_px: 16;
-$m_base_lh: 24;
+$base_px: 16;
+$base_lh: 22;
 
 $alpha: 100;
 $alpha_lh: 110;
 
+$m_alpha: 70;
+$m_alpha_lh: 80;
+
 $beta: 30;
 $beta_lh: 37;
+
+$beta: 26;
+$beta_lh: 32;
+
+$gamma: 24;
+$gamma_lh: 28;
+
+$delta: 19;
+$delta_lh: 24;
 
 $milli: 14;
 $milli_lh: 18;
@@ -128,11 +137,25 @@ $milli_lh: 18;
 @mixin alpha() {
     font-size: em($alpha, $base_px);
     line-height: em($alpha_lh, $alpha);
+    @include media($xs2s) {
+        font-size: em($m_alpha, $base_px);
+        line-height: em($m_alpha_lh, $m_alpha);
+    }
 }
 
 @mixin beta() {
     font-size: em($beta, $base_px);
     line-height: em($beta_lh, $beta);
+}
+
+@mixin gamma() {
+    font-size: em($gamma, $base_px);
+    line-height: em($gamma_lh, $gamma);
+}
+
+@mixin delta() {
+    font-size: em($delta, $base_px);
+    line-height: em($delta_lh, $delta);
 }
 
 @mixin milli() {

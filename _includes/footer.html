@@ -1,32 +1,22 @@
-<footer class="site-footer">
+<footer class="global container">
 
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-
-        <div class="footer-col footer-col-1">
-          <p>{{ site.description }}</p>
-        </div>
-
-        <div class="footer-col footer-col-2">
-            <ul class="contact-list">
-                {% include icon-email.html %}
-            </ul>
-        </div>
-
-        <div class="footer-col footer-col-3">
-            <ul class="social-media-list">
-                {% if site.twitter_username %}
-                <li>
-                    <a href="{{site.twitter_username}}">Twitter</a>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
-    </div>
-
-    {% include hactar-legend.html %}
-
-  </div>
-
+    <p>
+        A collection of resources for helping to ensure a safe future for the UK.<br>
+        Got a resource that you think we should add?<br>
+        Email or tweet us to let us know.
+    </p>
+    <ul class="social">
+        <li>
+            <a href="mailto:{{ site.email }}" class="icon icon-email"><span class="address">{{ site.email }}</span></a>
+        </li>
+    {% if site.twitter_username %}
+        <li>
+            <a href="https://twitter.com/{{site.twitter_username}}" class="icon icon-twitter">@{{site.twitter_username}}</a>
+        </li>
+    {% endif %}
+    </ul>
+    <p class="credit">
+        Regrex.it is a <a href="http://hactar.is">Hactar</a> side-project.<br>
+        <a href="http://hactar.is" class="icon icon-hactar">Hactar</a>
+    </p>
 </footer>

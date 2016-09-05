@@ -5,8 +5,5 @@ categories:
 - exit
 - emigrate
 link: http://www.transylvaniabeyond.com
-twitter: transylvaniabey
-type: ''
-layout: ''
 ---
 Surprisingly few vampires.

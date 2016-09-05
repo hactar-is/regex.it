@@ -5,8 +5,6 @@ categories:
 - emigrate
 - estonia
 link: http://howtostayin.eu
-twitter: ''
-type: ''
-layout: ''
+image: how-to-stay.jpg
 ---
 Manage an EU company from the UK

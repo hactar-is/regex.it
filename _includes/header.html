@@ -1,15 +1,18 @@
+<nav class="primary container">
+  <ul>
+    <li><a href="/"{% if page.url =='/' %} class="active"{% endif %}>Home</a></li>
+  {% for _ in site.pages %}
+    {% if _.title %}
+      <li><a href="{{ _.url | prepend: site.baseurl }}" {% if page.url ==_.url %} class="active"{% endif %}>{{ _.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</nav>
 <header class="hero">
   <div class="container">
     <div class="inner">
-      <h1>{{ site.title|replace:'x.i','x<em>.</em>i' }}</h1>
+      <h1><a href="/">{{ site.title|replace:'x.i','x<em>.</em>i' }}</a></h1>
       <p class="beta">Yes, it actually happened. Here are some actions you can take and resources to share.</p>
-      <nav>
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </nav>
     </div>
   </div>
 </header>

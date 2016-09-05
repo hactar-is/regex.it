@@ -15,7 +15,7 @@ ready(function () {
 
     var msnry = new Masonry( elem, {
       // options
-        itemSelector: '.item',
+        itemSelector: '.grid-item',
         columnWidth: '.item-sizer',
         gutter: '.gutter-sizer',
         percentPosition: true
