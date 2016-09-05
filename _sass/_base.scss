@@ -91,7 +91,7 @@ img {
 .panel {
     background-color: #fff;
     padding: 25px;
-    border-top: 4px solid $red;
+    border-top: 4px solid $blue-dark;
     @include media($s2l) {
         box-shadow: 0 2px 12px -4px rgba(0, 0, 0, 0.5);
     }

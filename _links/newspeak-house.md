@@ -5,8 +5,5 @@ categories:
 - politics
 - tech
 link: https://www.nwspk.com
-twitter: ''
-type: ''
-layout: ''
 ---
 Hack politics.

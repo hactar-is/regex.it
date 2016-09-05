@@ -9,15 +9,17 @@ function ready(fn) {
     document.addEventListener('DOMContentLoaded', fn);
   }
 }
-var elem = document.querySelector('.grid');
+var item_grid = document.querySelector('.grid');
 
 ready(function () {
 
-    var msnry = new Masonry( elem, {
-      // options
-        itemSelector: '.grid-item',
-        columnWidth: '.item-sizer',
-        gutter: '.gutter-sizer',
-        percentPosition: true
+    imagesLoaded( item_grid, function( instance ) {
+      var msnry = new Masonry( item_grid, {
+        // options
+          itemSelector: '.grid-item',
+          columnWidth: '.item-sizer',
+          gutter: '.gutter-sizer',
+          percentPosition: true
+      });
     });
 });

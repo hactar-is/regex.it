@@ -5,7 +5,5 @@ categories:
 - politics
 link: https://voteforpolicies.org.uk
 twitter: voteforpolicies
-type: ''
-layout: ''
 ---
 Because party politics is broken.

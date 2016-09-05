@@ -6,7 +6,5 @@ categories:
 - liquid democracy
 link: https://represent.me
 twitter: representlive
-type: ''
-layout: ''
 ---
 It's democracy, but better.
